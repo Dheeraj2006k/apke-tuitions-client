@@ -86,7 +86,9 @@ export default function Home() {
             Connect with verified, experienced tutors near you. Personalised
             learning for every student — CBSE, ICSE &amp; State Board.
           </p>
-          <div className="flex flex-wrap gap-4 mb-5">
+
+          {/* ── CTA Buttons ── */}
+          <div className="flex flex-wrap gap-4 mb-6">
             <button className="btn-primary" onClick={() => navigate("/parent")}>
               I'm a Parent
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -100,6 +102,38 @@ export default function Home() {
               </svg>
             </button>
           </div>
+
+          {/* ── PHONE HIGHLIGHT STRIP ── */}
+          <a
+            href="tel:+917671958601"
+            className="inline-flex items-center gap-3 mb-5 group cursor-pointer"
+            style={{ textDecoration: "none" }}
+          >
+            <div
+              className="flex items-center gap-3 px-5 py-3 rounded-2xl border-2 transition-all duration-200
+                         group-hover:-translate-y-0.5"
+              style={{
+                background: "linear-gradient(135deg, #fff3e0, #fff8f0)",
+                borderColor: "#ff9e3d",
+                boxShadow: "0 4px 16px rgba(255,127,0,0.18)",
+              }}
+            >
+              {/* Pulsing green dot */}
+              <span className="relative flex h-3 w-3 flex-shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <span className="text-slate-600 text-sm font-medium">Call us directly —</span>
+              <span
+                className="font-poppins font-extrabold text-lg"
+                style={{ color: "#ff7f00" }}
+              >
+                +91 76719 58601
+              </span>
+              <span className="text-slate-400 text-xs font-medium hidden sm:block">Free Demo</span>
+            </div>
+          </a>
+
           <p className="text-xs text-slate-400">✅ Free registration &nbsp;|&nbsp; ✅ No hidden charges</p>
         </div>
 
@@ -258,7 +292,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FOOTER — no admin link ── */}
+      {/* ── FOOTER ── */}
       <footer style={{ background: "#0f172a" }} className="px-[7vw] pt-10">
         <div className="flex flex-wrap justify-between items-start gap-6 pb-8
                         border-b border-white/10">
