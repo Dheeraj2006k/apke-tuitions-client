@@ -66,7 +66,7 @@ export default function Home() {
                         bg-blue-100 opacity-40 blur-[80px] pointer-events-none" />
 
         <div className="relative z-10 max-w-[560px] animate-fadeUp">
-          <span className="section-tag mb-5">🎓 Hyderabad's Trusted Tuition Network</span>
+          <span className="section-tag mb-5"><span aria-hidden="true">🎓</span> Hyderabad's Trusted Tuition Network</span>
           <h1 className="font-poppins font-extrabold leading-[1.1] mb-5"
               style={{ fontSize: "clamp(2.4rem, 4.5vw, 3.6rem)" }}>
             <span style={{
@@ -134,7 +134,7 @@ export default function Home() {
             </div>
           </a>
 
-          <p className="text-xs text-slate-400">✅ Free registration &nbsp;|&nbsp; ✅ No hidden charges</p>
+          <p className="text-xs text-slate-400"><span aria-hidden="true">✅</span> Free registration &nbsp;|&nbsp; <span aria-hidden="true">✅</span> No hidden charges</p>
         </div>
 
         {/* Decorative tutor cards */}
@@ -149,7 +149,7 @@ export default function Home() {
             <div className="flex flex-col flex-1">
               <span className="font-semibold text-sm text-slate-800">Anjali Sharma</span>
               <span className="text-xs text-slate-500">Mathematics · Class 10</span>
-              <span className="text-xs text-slate-400">⭐ 4.9 · 3 yrs exp.</span>
+              <span className="text-xs text-slate-400"><span aria-hidden="true">⭐</span> 4.9 · 3 yrs exp.</span>
             </div>
             <span className="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Available</span>
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
             <div className="flex flex-col flex-1">
               <span className="font-semibold text-sm text-slate-800">Rahul Kumar</span>
               <span className="text-xs text-slate-500">Science + Maths · Class 8</span>
-              <span className="text-xs text-slate-400">⭐ 4.8 · 5 yrs exp.</span>
+              <span className="text-xs text-slate-400"><span aria-hidden="true">⭐</span> 4.8 · 5 yrs exp.</span>
             </div>
             <span className="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">Available</span>
           </div>
@@ -209,7 +209,7 @@ export default function Home() {
                             flex flex-col items-center gap-3 text-center shadow-card
                             hover:-translate-y-1 hover:border-orange-light hover:shadow-orange
                             transition-all duration-200 cursor-default">
-              <span className="text-3xl">{s.icon}</span>
+              <span className="text-3xl" aria-hidden="true">{s.icon}</span>
               <span className="text-sm font-semibold text-slate-600 leading-tight">{s.label}</span>
             </div>
           ))}
@@ -229,14 +229,14 @@ export default function Home() {
              className={`flex flex-wrap justify-center transition-all duration-500 delay-150 ${vis("how-steps")}`}>
           {HOW_STEPS.map((s, i) => (
             <div key={i} className="relative flex flex-col items-center text-center px-8 py-6 max-w-[240px]">
-              <span className="font-poppins font-extrabold text-5xl leading-none mb-4"
+              <span className="font-poppins font-extrabold text-5xl leading-none mb-4" aria-hidden="true"
                     style={{ color: "#fff3e0", WebkitTextStroke: "2px #ff9e3d" }}>
                 {s.n}
               </span>
               <h3 className="font-poppins font-bold text-base text-slate-900 mb-2">{s.t}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{s.d}</p>
               {i < HOW_STEPS.length - 1 && (
-                <span className="absolute -right-3 top-10 text-orange-light text-2xl hidden sm:block">→</span>
+                <span className="absolute -right-3 top-10 text-orange-light text-2xl hidden sm:block" aria-hidden="true">→</span>
               )}
             </div>
           ))}
@@ -257,7 +257,7 @@ export default function Home() {
             <div key={i}
                  className="bg-white rounded-2xl border border-slate-100 p-7 shadow-card
                             hover:-translate-y-1 transition-transform duration-200">
-              <span className="text-3xl block mb-4">{b.icon}</span>
+              <span className="text-3xl block mb-4" aria-hidden="true">{b.icon}</span>
               <h3 className="font-poppins font-bold text-base text-slate-900 mb-2">{b.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{b.desc}</p>
             </div>
@@ -286,7 +286,7 @@ export default function Home() {
             <a href="tel:+917671958601"
                className="text-orange-light font-semibold text-sm border-b
                           border-dashed border-orange-light pb-0.5 hover:opacity-75 transition-opacity">
-              📞 Call Now for Free Demo
+              <span aria-hidden="true">📞</span> Call Now for Free Demo
             </a>
           </div>
         </div>

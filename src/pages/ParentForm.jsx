@@ -152,17 +152,17 @@ export default function ParentForm() {
             <ul className="space-y-3 mb-10">
               {PERKS.map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm text-white/75 leading-relaxed">
-                  <span className="text-emerald-400 font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span className="text-emerald-400 font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span>
                   {p}
                 </li>
               ))}
             </ul>
             <div className="border-t border-white/10 pt-6">
               <span className="text-xs text-white/35 block mb-1">Need help? Call us</span>
-              <a href="tel:+919999999999"
+              <a href="tel:+917671958601"
                  className="font-poppins font-semibold text-lg hover:underline"
                  style={{ color:"#ff9e3d" }}>
-                +91 99999 99999
+                +91 76719 58601
               </a>
             </div>
           </div>
@@ -333,3 +333,5 @@ export default function ParentForm() {
     </div>
   );
 }
+
+

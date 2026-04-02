@@ -309,7 +309,7 @@ export default function AdminDashboard() {
                     {req.assigned_tutor_id ? (
                       <div className="flex items-center gap-2 bg-green-50 border border-green-100
                                       rounded-xl px-3 py-2 text-sm text-green-700">
-                        <span>✓</span>
+                        <span aria-hidden="true">✓</span>
                         <span>
                           Assigned to <strong>{req.assigned_tutor_id.name || "Tutor"}</strong>
                           {req.assigned_at && (
@@ -464,7 +464,7 @@ export default function AdminDashboard() {
               {pwSuccess && (
                 <div className="flex items-center gap-2 px-4 py-3 bg-green-50 border
                                 border-green-200 rounded-xl text-green-700 text-sm">
-                  <span>✓</span> {pwSuccess}
+                  <span aria-hidden="true">✓</span> {pwSuccess}
                 </div>
               )}
 
@@ -533,3 +533,5 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
+
