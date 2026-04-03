@@ -1,4 +1,4 @@
-import { DM_Sans, Poppins } from "next/font/google";
+﻿import { DM_Sans, Poppins } from "next/font/google";
 
 import "../src/index.css";
 
@@ -54,6 +54,9 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "8wRDNx1QsepwiFGkj7wFLJHG4k3sqrGwkyNK98oQ_LM",
+  },
 };
 
 const localBusinessSchema = {
@@ -96,4 +99,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
+
 
