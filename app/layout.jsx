@@ -35,7 +35,12 @@ export const metadata = {
   ],
   authors: [{ name: "Apke Tuitions" }],
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
@@ -121,4 +126,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
 
