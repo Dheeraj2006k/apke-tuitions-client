@@ -34,6 +34,9 @@ export const metadata = {
     "apke tuitions",
   ],
   authors: [{ name: "Apke Tuitions" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     siteName: "Apke Tuitions",
@@ -86,6 +89,21 @@ const localBusinessSchema = {
   },
 };
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Apke Tuitions",
+  url: "https://www.apketuitions.com",
+  logo: "https://www.apketuitions.com/favicon.ico",
+  telephone: "+917671958601",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Hyderabad",
+    addressRegion: "Telangana",
+    addressCountry: "IN",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${dmSans.variable}`}>
@@ -95,11 +113,12 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
       </body>
     </html>
   );
 }
-
-
-
 
