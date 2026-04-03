@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { submitParentRequest } from "../services/parentService";
 import Navbar from "../components/Navbar";
 
@@ -26,7 +28,7 @@ const PERKS = [
 ];
 
 export default function ParentForm() {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // Form state
   const [form,        setForm]        = useState(INITIAL);
@@ -113,7 +115,7 @@ export default function ParentForm() {
             Our team will contact you within 24 hours.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="btn-primary" onClick={() => navigate("/")}>Back to Home</button>
+            <button className="btn-primary" onClick={() => router.push("/")}>Back to Home</button>
             <button className="btn-ghost"
                     onClick={() => { setForm(INITIAL); setSubmitted(false); }}>
               Submit Another
@@ -333,5 +335,6 @@ export default function ParentForm() {
     </div>
   );
 }
+
 
 

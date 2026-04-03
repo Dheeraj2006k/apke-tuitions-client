@@ -1,12 +1,7 @@
-/* Google Fonts — Poppins (headings) + DM Sans (body) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
-
-/* Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ── Global base overrides ── */
 @layer base {
   * {
     box-sizing: border-box;
@@ -14,105 +9,103 @@
     padding: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-dm-sans), sans-serif;
     background-color: #fafafa;
     color: #0f172a;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-poppins), sans-serif;
   }
 }
 
-/* ── Reusable component classes ── */
 @layer components {
-
-  /* Primary button — orange gradient */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white text-sm
-           transition-all duration-200 cursor-pointer border-0;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-white text-sm transition-all duration-200 cursor-pointer border-0;
     background: linear-gradient(135deg, #ff7f00, #e65c00);
     box-shadow: 0 4px 20px rgba(255, 127, 0, 0.35);
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-dm-sans), sans-serif;
   }
+
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 28px rgba(255, 127, 0, 0.42);
   }
 
-  /* Secondary button — outlined blue */
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm
-           border-2 border-blue-400 text-blue-600 bg-white transition-all duration-200 cursor-pointer;
-    font-family: 'DM Sans', sans-serif;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm border-2 border-blue-400 text-blue-600 bg-white transition-all duration-200 cursor-pointer;
+    font-family: var(--font-dm-sans), sans-serif;
   }
+
   .btn-secondary:hover {
     @apply bg-blue-50;
     transform: translateY(-2px);
   }
 
-  /* Ghost button */
   .btn-ghost {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm
-           border-2 border-slate-200 text-slate-600 bg-white transition-all duration-200 cursor-pointer;
-    font-family: 'DM Sans', sans-serif;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm border-2 border-slate-200 text-slate-600 bg-white transition-all duration-200 cursor-pointer;
+    font-family: var(--font-dm-sans), sans-serif;
   }
+
   .btn-ghost:hover {
     @apply border-orange-300 bg-orange-50 text-orange-600;
   }
 
-  /* Form input */
   .form-input {
-    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50
-           text-slate-800 text-sm outline-none transition-all duration-200;
-    font-family: 'DM Sans', sans-serif;
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-sm outline-none transition-all duration-200;
+    font-family: var(--font-dm-sans), sans-serif;
   }
+
   .form-input:focus {
     @apply border-orange-400 bg-white;
     box-shadow: 0 0 0 3px rgba(255, 127, 0, 0.12);
   }
+
   .form-input.error {
     @apply border-red-400 bg-red-50;
   }
 
-  /* Form label */
   .form-label {
     @apply block text-sm font-semibold text-slate-600 mb-1.5;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-dm-sans), sans-serif;
   }
 
-  /* Section tag pill */
   .section-tag {
-    @apply inline-block text-xs font-semibold uppercase tracking-widest
-           px-3 py-1 rounded-full mb-3;
+    @apply inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3;
     background: #fff3e0;
     color: #ff7f00;
     border: 1px solid #ffd59a;
   }
 
-  /* Card */
   .card {
     @apply bg-white rounded-2xl border border-slate-100 p-7;
     box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   }
 }
 
-/* ── Keyframe animations ── */
 @layer utilities {
   .animate-fadeUp {
     animation: fadeUp 0.6s ease both;
   }
+
   .animate-fadeUp-d1 {
     animation: fadeUp 0.6s 0.1s ease both;
   }
+
   .animate-fadeUp-d2 {
     animation: fadeUp 0.6s 0.2s ease both;
   }
+
   .animate-fadeUp-d3 {
     animation: fadeUp 0.6s 0.3s ease both;
   }
+
   .animate-spin-slow {
     animation: spin 0.7s linear infinite;
   }

@@ -1,5 +1,7 @@
+"use client";
+
 import { useState, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import {
   getParentRequests,
   getTutors,
@@ -18,12 +20,12 @@ const STATUS_STYLES = {
 const STATUS_OPTIONS = ["new", "contacted", "assigned", "closed"];
 
 export default function AdminDashboard() {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
-    if (!token) navigate("/admin");
-  }, [navigate]);
+    if (!token) router.replace("/admin");
+  }, [router]);
 
   const [activeTab,      setActiveTab]      = useState("requests");
   const [requests,       setRequests]       = useState([]);
@@ -56,20 +58,20 @@ export default function AdminDashboard() {
     } catch (err) {
       if (err.response?.status === 401) {
         localStorage.removeItem("adminToken");
-        navigate("/admin");
+        router.replace("/admin");
       } else {
         setError("Failed to load data. Please refresh.");
       }
     } finally {
       setLoading(false);
     }
-  }, [navigate]);
+  }, [router]);
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
 
   const handleLogout = () => {
     localStorage.removeItem("adminToken");
-    navigate("/admin");
+    router.replace("/admin");
   };
 
   const handleStatusChange = async (requestId, newStatus) => {
@@ -146,7 +148,7 @@ export default function AdminDashboard() {
       setPwSuccess("Password changed! Logging you out in 2 seconds...");
       setTimeout(() => {
         localStorage.removeItem("adminToken");
-        navigate("/admin");
+        router.replace("/admin");
       }, 2000);
     } catch (err) {
       const msg = err.response?.data?.message || "Failed to change password. Try again.";
@@ -533,5 +535,7 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
+
 
 

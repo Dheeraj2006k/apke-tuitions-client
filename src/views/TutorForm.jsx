@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { submitTutorRegistration } from "../services/tutorService";
 import Navbar from "../components/Navbar";
 
@@ -20,7 +22,7 @@ const PERKS = [
 ];
 
 export default function TutorForm() {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   // Form state
   const [form,        setForm]        = useState(INITIAL);
@@ -107,7 +109,7 @@ export default function TutorForm() {
             out to you with student matches soon.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <button className="btn-primary" onClick={() => navigate("/")}>Back to Home</button>
+            <button className="btn-primary" onClick={() => router.push("/")}>Back to Home</button>
             <button className="btn-ghost"
                     onClick={() => { setForm(INITIAL); setSubmitted(false); }}>
               Register Another
@@ -345,5 +347,6 @@ export default function TutorForm() {
     </div>
   );
 }
+
 
 

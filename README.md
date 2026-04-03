@@ -1,16 +1,36 @@
-# React + Vite
+﻿# Apke Tuitions Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This frontend now runs on Next.js App Router.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm run dev` starts the local Next development server
+- `npm run build` creates the production build
+- `npm run start` runs the built app
+- `npm run lint` runs ESLint
 
-## React Compiler
+## Environment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create a local `.env` file with:
 
-## Expanding the ESLint configuration
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+For production, set `NEXT_PUBLIC_API_URL` in Vercel.
+
+## SEO Setup Included
+
+- App Router metadata in `app/layout.jsx` and route `page.jsx` files
+- Generated `robots.txt` via `app/robots.js`
+- Generated `sitemap.xml` via `app/sitemap.js`
+- Open Graph image at `public/og-image.png`
+- FAQ schema on the homepage
+- Static locality and subject landing pages for Hyderabad SEO
+
+## Deployment Notes
+
+- Deploy the frontend to Vercel
+- Set the production environment variable `NEXT_PUBLIC_API_URL`
+- Connect the custom domain `apketuitions.com`
+- Submit `https://apketuitions.com/sitemap.xml` in Google Search Console

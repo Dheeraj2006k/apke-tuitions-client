@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { loginAdmin } from "../../services/adminService";
 
 /**
@@ -8,7 +10,7 @@ import { loginAdmin } from "../../services/adminService";
  * On success: stores token in localStorage → redirects to /admin/dashboard
  */
 export default function AdminLogin() {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [form,     setForm]     = useState({ email: "", password: "" });
   const [error,    setError]    = useState("");
@@ -32,7 +34,7 @@ export default function AdminLogin() {
     try {
       const data = await loginAdmin(form);
       localStorage.setItem("adminToken", data.token);
-      navigate("/admin/dashboard");
+      router.push("/admin/dashboard");
     } catch (err) {
       const msg = err.response?.data?.message || "Login failed. Please try again.";
       setError(msg);
@@ -119,7 +121,7 @@ export default function AdminLogin() {
         {/* Back to public site */}
         <p className="text-center text-sm text-slate-400 mt-5">
           <span
-            onClick={() => navigate("/")}
+            onClick={() => router.push("/")}
             className="text-orange cursor-pointer hover:underline"
           >
             ← Back to website
