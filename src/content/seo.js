@@ -23,6 +23,54 @@
 
 export const LOCALITY_PAGES = [
   {
+    slug: "kokapet",
+    name: "Kokapet",
+    title: "Home Tutors in Kokapet",
+    metaTitle: "Home Tutors in Kokapet, Hyderabad",
+    description:
+      "Find verified home tutors in Kokapet for CBSE, ICSE, and State Board students. One-on-one tuition near MGIT College, flexible timings, and free demo class.",
+    intro:
+      "Kokapet is a fast-growing residential area near the Financial District and MGIT College, with many families looking for reliable home tutors for school-age children. Apke Tuitions connects parents in Kokapet with verified, experienced tutors for home visits and online sessions tailored to each student's needs.",
+    highlights: [
+      "Home tutors available near MGIT College and Kokapet Road",
+      "Support for CBSE, ICSE, and Telangana State Board",
+      "One-on-one sessions with flexible evening and weekend slots",
+      "Free demo class before you confirm a tutor",
+    ],
+    landmarks: ["MGIT College", "Kokapet Road", "Financial District", "Narsingi"],
+    needs: [
+      "Maths and science support for middle and secondary school students",
+      "Board exam preparation for Classes 10 and 12",
+      "After-school concept reinforcement for primary students",
+    ],
+    relatedSubjects: ["maths", "science", "physics"],
+    nearbyAreas: ["gandipet", "gachibowli", "madhapur"],
+  },
+  {
+    slug: "gandipet",
+    name: "Gandipet",
+    title: "Home Tutors in Gandipet",
+    metaTitle: "Home Tutors in Gandipet, Hyderabad",
+    description:
+      "Get verified home tutors in Gandipet, Hyderabad for Classes 1 to 12. CBSE, ICSE, and State Board support near MGIT College with free demo class available.",
+    intro:
+      "Gandipet and the areas surrounding MGIT College have a growing demand for quality home tutors as more families settle in this developing corridor. Apke Tuitions helps parents in Gandipet find trusted tutors who offer personalised one-on-one sessions at home or online, with strong subject expertise and consistent follow-up.",
+    highlights: [
+      "Verified tutors covering Gandipet and nearby localities",
+      "CBSE, ICSE, and State Board tuition for all classes",
+      "Home visits and online sessions available",
+      "Free demo class with no commitment required",
+    ],
+    landmarks: ["MGIT College", "Gandipet Lake", "Kokapet Road", "Narsingi Junction"],
+    needs: [
+      "Strong maths and science tuition for school students",
+      "Exam preparation support for Classes 9 to 12",
+      "Personalised attention for students who need extra help",
+    ],
+    relatedSubjects: ["maths", "science", "english"],
+    nearbyAreas: ["kokapet", "gachibowli", "madhapur"],
+  },
+  {
     slug: "kukatpally",
     name: "Kukatpally",
     title: "Home Tutors in Kukatpally",
@@ -44,7 +92,7 @@ export const LOCALITY_PAGES = [
       "Homework and concept reinforcement for younger students",
     ],
     relatedSubjects: ["maths", "science", "english"],
-    nearbyAreas: ["madhapur", "gachibowli", "secunderabad"],
+    nearbyAreas: ["madhapur", "gachibowli", "kokapet"],
   },
   {
     slug: "madhapur",
@@ -68,7 +116,7 @@ export const LOCALITY_PAGES = [
       "Focused exam preparation for higher classes",
     ],
     relatedSubjects: ["physics", "chemistry", "english"],
-    nearbyAreas: ["kukatpally", "gachibowli", "banjara-hills"],
+    nearbyAreas: ["gachibowli", "kokapet", "banjara-hills"],
   },
   {
     slug: "banjara-hills",
@@ -116,7 +164,7 @@ export const LOCALITY_PAGES = [
       "Consistent academic support with measurable progress",
     ],
     relatedSubjects: ["maths", "physics", "chemistry"],
-    nearbyAreas: ["madhapur", "kukatpally", "banjara-hills"],
+    nearbyAreas: ["kokapet", "gandipet", "madhapur"],
   },
   {
     slug: "secunderabad",
@@ -166,7 +214,7 @@ export const SUBJECT_PAGES = [
       "Better confidence in classwork and exams",
       "Stronger fundamentals for advanced topics",
     ],
-    relatedAreas: ["kukatpally", "gachibowli", "banjara-hills"],
+    relatedAreas: ["kokapet", "gandipet", "gachibowli"],
   },
   {
     slug: "science",
@@ -189,7 +237,7 @@ export const SUBJECT_PAGES = [
       "Improved test preparation and answer quality",
       "Less fear around mixed-topic science exams",
     ],
-    relatedAreas: ["secunderabad", "madhapur", "kukatpally"],
+    relatedAreas: ["kokapet", "gandipet", "secunderabad"],
   },
   {
     slug: "english",
@@ -212,7 +260,7 @@ export const SUBJECT_PAGES = [
       "Better classroom confidence and communication",
       "Improved comprehension and retention",
     ],
-    relatedAreas: ["banjara-hills", "secunderabad", "madhapur"],
+    relatedAreas: ["gandipet", "banjara-hills", "madhapur"],
   },
   {
     slug: "physics",
@@ -235,7 +283,7 @@ export const SUBJECT_PAGES = [
       "Clearer conceptual understanding of core chapters",
       "Higher confidence in school and board exams",
     ],
-    relatedAreas: ["gachibowli", "madhapur", "banjara-hills"],
+    relatedAreas: ["kokapet", "gachibowli", "madhapur"],
   },
   {
     slug: "chemistry",
