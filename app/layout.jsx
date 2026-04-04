@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://apketuitions.com"),
+  metadataBase: new URL("https://www.apketuitions.com"),
   title: {
     default: "Apke Tuitions | Home Tutors in Hyderabad",
     template: "%s | Apke Tuitions",
@@ -34,6 +34,9 @@ export const metadata = {
     "apke tuitions",
   ],
   authors: [{ name: "Apke Tuitions" }],
+  alternates: {
+    canonical: "https://www.apketuitions.com",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -48,7 +51,7 @@ export const metadata = {
     title: "Apke Tuitions | Best Home Tutors in Hyderabad",
     description:
       "Verified home tutors for Classes 1-12 in Hyderabad. Free demo class. CBSE, ICSE & State Board covered.",
-    url: "https://apketuitions.com",
+    url: "https://www.apketuitions.com",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
@@ -73,7 +76,7 @@ const localBusinessSchema = {
   name: "Apke Tuitions",
   description:
     "Home tuition service in Hyderabad providing verified tutors for Classes 1-12. CBSE, ICSE and State Board.",
-  url: "https://apketuitions.com",
+  url: "https://www.apketuitions.com",
   telephone: "+917671958601",
   address: {
     "@type": "PostalAddress",
@@ -126,5 +129,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-

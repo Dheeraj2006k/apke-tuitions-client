@@ -7,11 +7,11 @@ export const metadata = {
   description:
     "Explore subject-specific tutor pages for maths, science, English, physics, and chemistry in Hyderabad.",
   alternates: {
-    canonical: "https://apketuitions.com/subjects",
+    canonical: "https://www.apketuitions.com/subjects",
   },
   openGraph: {
     title: "Subject Tutor Pages | Apke Tuitions",
-    url: "https://apketuitions.com/subjects",
+    url: "https://www.apketuitions.com/subjects",
   },
 };
 
@@ -57,3 +57,4 @@ export default function SubjectsHubPage() {
     </main>
   );
 }
+

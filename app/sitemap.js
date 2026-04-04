@@ -5,46 +5,47 @@ export default function sitemap() {
 
   return [
     {
-      url: "https://apketuitions.com",
+      url: "https://www.apketuitions.com",
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://apketuitions.com/parent",
+      url: "https://www.apketuitions.com/parent",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://apketuitions.com/tutor",
+      url: "https://www.apketuitions.com/tutor",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://apketuitions.com/hyderabad",
+      url: "https://www.apketuitions.com/hyderabad",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://apketuitions.com/subjects",
+      url: "https://www.apketuitions.com/subjects",
       lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     ...LOCALITY_PAGES.map((area) => ({
-      url: `https://apketuitions.com/hyderabad/${area.slug}`,
+      url: `https://www.apketuitions.com/hyderabad/${area.slug}`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.75,
     })),
     ...SUBJECT_PAGES.map((subject) => ({
-      url: `https://apketuitions.com/subjects/${subject.slug}`,
+      url: `https://www.apketuitions.com/subjects/${subject.slug}`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.75,
     })),
   ];
 }
+

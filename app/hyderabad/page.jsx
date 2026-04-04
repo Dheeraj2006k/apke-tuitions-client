@@ -7,11 +7,11 @@ export const metadata = {
   description:
     "Explore the Hyderabad localities where Apke Tuitions offers home tutors, including Kukatpally, Madhapur, Gachibowli, Banjara Hills, and Secunderabad.",
   alternates: {
-    canonical: "https://apketuitions.com/hyderabad",
+    canonical: "https://www.apketuitions.com/hyderabad",
   },
   openGraph: {
     title: "Hyderabad Areas We Serve | Apke Tuitions",
-    url: "https://apketuitions.com/hyderabad",
+    url: "https://www.apketuitions.com/hyderabad",
   },
 };
 
@@ -57,3 +57,4 @@ export default function HyderabadHubPage() {
     </main>
   );
 }
+

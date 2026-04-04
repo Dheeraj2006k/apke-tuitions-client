@@ -8,10 +8,10 @@ export const metadata = {
   openGraph: {
     title: "Apke Tuitions | Best Home Tutors in Hyderabad",
     description: "Verified home tutors for Classes 1-12. Free demo class.",
-    url: "https://apketuitions.com",
+    url: "https://www.apketuitions.com",
   },
   alternates: {
-    canonical: "https://apketuitions.com",
+    canonical: "https://www.apketuitions.com",
   },
 };
 
@@ -39,3 +39,4 @@ export default function Page() {
     </>
   );
 }
+

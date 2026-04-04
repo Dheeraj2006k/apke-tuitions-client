@@ -22,12 +22,12 @@ export function generateMetadata({ params }) {
     title: area.metaTitle,
     description: area.description,
     alternates: {
-      canonical: `https://apketuitions.com/hyderabad/${area.slug}`,
+      canonical: `https://www.apketuitions.com/hyderabad/${area.slug}`,
     },
     openGraph: {
       title: `${area.title} | Apke Tuitions`,
       description: area.description,
-      url: `https://apketuitions.com/hyderabad/${area.slug}`,
+      url: `https://www.apketuitions.com/hyderabad/${area.slug}`,
     },
   };
 }
@@ -140,3 +140,4 @@ export default function LocalityPage({ params }) {
     </main>
   );
 }
+

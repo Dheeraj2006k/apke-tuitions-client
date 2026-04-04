@@ -22,12 +22,12 @@ export function generateMetadata({ params }) {
     title: subject.metaTitle,
     description: subject.description,
     alternates: {
-      canonical: `https://apketuitions.com/subjects/${subject.slug}`,
+      canonical: `https://www.apketuitions.com/subjects/${subject.slug}`,
     },
     openGraph: {
       title: `${subject.name} | Apke Tuitions`,
       description: subject.description,
-      url: `https://apketuitions.com/subjects/${subject.slug}`,
+      url: `https://www.apketuitions.com/subjects/${subject.slug}`,
     },
   };
 }
@@ -128,3 +128,4 @@ export default function SubjectPage({ params }) {
     </main>
   );
 }
+
